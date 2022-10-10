@@ -1,0 +1,1 @@
+{"success":false,"data":{"id":null,"name":"","sku":"test-1-sku","description":"test-4-description","price":40001},"errors":{"sku":"This value is already used.","name":"This value should not be blank."}}
