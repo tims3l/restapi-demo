@@ -133,9 +133,6 @@ abstract class AbstractRestApiController extends AbstractController implements R
 
     protected function handleHttpException(\Throwable $e, string $level = LogLevel::CRITICAL): JsonResponse
     {
-//        throw $e; // todo: KIVENNI
-//        dump($e);
-        
         $this->logger->log($level, $e->getMessage(), (array)$e);
 
         if ($e instanceof NotFoundHttpException) {
