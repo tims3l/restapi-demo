@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace App\Service\RestApi;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 

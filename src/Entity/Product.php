@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use App\Attribute\Api;
 use App\Repository\ProductRepository;
 use DateTime;
 use DateTimeImmutable;
@@ -11,6 +12,7 @@ use Doctrine\DBAL\Types\Types;
 use JsonSerializable;
 use Symfony\Component\Validator\Constraints as Assert;
 
+#[Api]
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
 #[ORM\Index(name: "name_idx", fields: ["name"])]
 #[ORM\Index(name: "price_idx", fields: ["price"])]

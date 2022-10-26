@@ -37,4 +37,14 @@ class EntityService implements EntityServiceInterface
         $this->entityManager->remove($entity);
         $this->entityManager->flush();
     }
+    
+    public function getAllEntityClassnames(): array
+    {
+        return $this->entityManager->getConfiguration()->getMetadataDriverImpl()->getAllClassNames();
+    }
+    
+    public function getRepository(string $class)
+    {
+        return $this->entityManager->getRepository($class);
+    }
 }
