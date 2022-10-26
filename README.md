@@ -149,7 +149,7 @@ You can run application tests with the following command:
 
 ### Rest API builder
 You can quickly create `HTTP` endpoints, based on `REST` principles. The `RestApi` class is responsible for the standard `CRUD` operation through `HTTP` endpoints.
-- Create a Doctrine entity in `App\Entity` namespace. You can use the `App\Entity\Product` class as an example.
+- Create a Doctrine entity in `App\Entity` namespace. You can use the `App\Entity\Product` class as an example. It is important to use the `#[Api]` attribute on your entity.
 - Create a Doctrine repository in `App\Repository` namespace. You can use the `App\Entity\ProductRepository` class as an example.
 - And that's it, you can use the standard `CRUD` endpoints (`POST`, `PUT`, `GET`, `DELETE`) on your new entity. The underlying logic makes sure that all of your endpoints will respond with the same `JSON` format, and can be called in the same way. 
 
@@ -161,5 +161,5 @@ You can quickly test your new endpoints using the `AbstractApiTest` class.
     - `php bin/phpunit tests/Application/RestApi/ExampleApiTest.php`
 
 ## Todos
-- Create separate `RestApi` and ```Response` libraries.
+- Create separate `RestApi` and `Response` libraries.
 - Create swagger configs.
