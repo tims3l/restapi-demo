@@ -28,7 +28,7 @@ final class RequestListener
         $this->api = $api;
     }
     
-    public function __invoke(RequestEvent $event)
+    public function __invoke(RequestEvent $event): void
     {
         $this->event = $event;
 
@@ -69,7 +69,7 @@ final class RequestListener
     private function getEntityClassByUriSegment(string $uriSegment): string
     {
         foreach ($this->entityService->getAllEntityClassnames() as $class) {
-            if ($baseClass = strtolower(StrUtils::getClassBasename($class)) == $uriSegment && $this->apiAttributeHandler->hasAttribute($class)) {
+            if (strtolower(StrUtils::getClassBasename($class)) == $uriSegment && $this->apiAttributeHandler->hasAttribute($class)) {
                 return $class;
             }
         }

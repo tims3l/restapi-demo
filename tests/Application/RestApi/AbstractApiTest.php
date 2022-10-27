@@ -41,7 +41,7 @@ abstract class AbstractApiTest extends WebTestCase
         $connection->executeUpdate($q);
     }
 
-    private function prepareExpectedResult(string $path, mixed $search, mixed $replace)
+    private function prepareExpectedResult(string $path, mixed $search, mixed $replace): string
     {
         return str_replace($search, $replace, file_get_contents($path));
     }

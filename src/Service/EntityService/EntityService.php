@@ -5,6 +5,7 @@ namespace App\Service\EntityService;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ObjectRepository;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
@@ -43,7 +44,7 @@ class EntityService implements EntityServiceInterface
         return $this->entityManager->getConfiguration()->getMetadataDriverImpl()->getAllClassNames();
     }
     
-    public function getRepository(string $class)
+    public function getRepository(string $class): ObjectRepository
     {
         return $this->entityManager->getRepository($class);
     }

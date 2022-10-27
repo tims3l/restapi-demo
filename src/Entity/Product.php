@@ -14,10 +14,10 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 #[Api]
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
-#[ORM\Index(name: "name_idx", fields: ["name"])]
-#[ORM\Index(name: "price_idx", fields: ["price"])]
-#[ORM\Index(name: "created_at_idx", fields: ["createdAt"])]
-#[ORM\Index(name: "updated_at_idx", fields: ["updatedAt"])]
+#[ORM\Index(fields: ["name"], name: "name_idx")]
+#[ORM\Index(fields: ["price"], name: "price_idx")]
+#[ORM\Index(fields: ["createdAt"], name: "created_at_idx")]
+#[ORM\Index(fields: ["updatedAt"], name: "updated_at_idx")]
 class Product implements ProductInterface, JsonSerializable
 {
     #[ORM\Id]
@@ -29,7 +29,7 @@ class Product implements ProductInterface, JsonSerializable
     #[Assert\NotBlank]
     private string $name;
 
-    #[ORM\Column(length: 255, nullable: false, unique: true)]
+    #[ORM\Column(length: 255, unique: true, nullable: false)]
     #[Assert\NotBlank]
     private string $sku;
 
