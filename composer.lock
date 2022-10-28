@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e233cdbc6a2e19b25d4dd15ca3b5b847",
+    "content-hash": "03a105c9e5c518822e1c3afd44fd896a",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3685,6 +3685,52 @@
             "time": "2022-05-10T14:24:36+00:00"
         },
         {
+            "name": "symfony/orm-pack",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/orm-pack.git",
+                "reference": "c4728ba9ed071876f71df637c7dff0490c9252b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/orm-pack/zipball/c4728ba9ed071876f71df637c7dff0490c9252b2",
+                "reference": "c4728ba9ed071876f71df637c7dff0490c9252b2",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/doctrine-bundle": "*",
+                "doctrine/doctrine-migrations-bundle": "*",
+                "doctrine/orm": "*",
+                "symfony/proxy-manager-bridge": "*"
+            },
+            "type": "symfony-pack",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A pack for the Doctrine ORM",
+            "support": {
+                "issues": "https://github.com/symfony/orm-pack/issues",
+                "source": "https://github.com/symfony/orm-pack/tree/v2.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-01-12T09:53:02+00:00"
+        },
+        {
             "name": "symfony/polyfill-intl-grapheme",
             "version": "v1.26.0",
             "source": {
@@ -4984,6 +5030,63 @@
                 }
             ],
             "time": "2022-08-02T16:17:38+00:00"
+        },
+        {
+            "name": "tims3l/restapi-bundle",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tims3l/restapi-bundle.git",
+                "reference": "a97707783a0113f84bd28db729e7520103dc54f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tims3l/restapi-bundle/zipball/a97707783a0113f84bd28db729e7520103dc54f4",
+                "reference": "a97707783a0113f84bd28db729e7520103dc54f4",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": "^2.13",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-openssl": "*",
+                "ext-pdo": "*",
+                "php": "^8.1",
+                "psr/log": "^3.0",
+                "spatie/url": "^2.1",
+                "symfony/http-kernel": "^6.1",
+                "symfony/orm-pack": "^2.2",
+                "symfony/property-info": "^6.1",
+                "symfony/validator": "^6.1"
+            },
+            "require-dev": {
+                "symfony/test-pack": "^1.0"
+            },
+            "default-branch": true,
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Tims3l\\RestApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.0-or-later"
+            ],
+            "description": "tims3l restapi api symfony bundle",
+            "homepage": "https://github.com/tims3l/restapi-bundle",
+            "keywords": [
+                "api",
+                "bundle",
+                "restapi",
+                "symfony",
+                "tims3l"
+            ],
+            "support": {
+                "issues": "https://github.com/tims3l/restapi-bundle/issues",
+                "source": "https://github.com/tims3l/restapi-bundle/tree/develop"
+            },
+            "time": "2022-10-28T15:02:09+00:00"
         }
     ],
     "packages-dev": [
@@ -7008,7 +7111,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "tims3l/restapi-bundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
-use App\Attribute\Api;
 use App\Repository\ProductRepository;
 use DateTime;
 use DateTimeImmutable;
@@ -11,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\DBAL\Types\Types;
 use JsonSerializable;
 use Symfony\Component\Validator\Constraints as Assert;
+use Tims3l\RestApi\Attribute\Api;
 
 #[Api]
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
@@ -63,12 +63,6 @@ class Product implements ProductInterface, JsonSerializable
     public function getId(): int
     {
         return $this->id;
-    }
-
-    public function setId(int $id): self
-    {
-        $this->id = $id;
-        return $this;
     }
 
     public function getName(): string

@@ -155,5 +155,8 @@
         "files": [
             "config/packages/validator.yaml"
         ]
+    },
+    "tims3l/restapi-bundle": {
+        "version": "0.1"
     }
 }

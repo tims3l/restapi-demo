@@ -5,6 +5,7 @@ namespace App\Tests\Application\RestApi;
 
 use App\Entity\Product;
 use Symfony\Component\HttpFoundation\Response;
+use Tims3l\RestApi\Tests\Application\RestApi\AbstractApiTest;
 
 final class ProductApiTest extends AbstractApiTest
 {
