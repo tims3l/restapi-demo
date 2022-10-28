@@ -8,7 +8,7 @@ Restapi demo is a `Symfony` / `Doctrine` based sample `REST API` and application
 
 ## Installation
 - `git clone https://github.com/tims3l/restapi-demo.git`
-- `cd product-demo`
+- `cd restapi-demo`
 - `cp .env.example .env` (and modify it to your needs)
 - `cp .env.test.example .env.test` (for running tests; modify to your needs)
 - `composer install`
